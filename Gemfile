@@ -52,3 +52,4 @@ end
 
 gem 'bootstrap-sass'
 gem 'active_model_serializers'
+gem 'bcrypt'
