@@ -1,5 +1,6 @@
 class Api::ListsController < ApiController
   before_action :authenticated?
+  before_action :permissions_valid, only: [:update]
 
   def create
     list = List.new(list_params)
