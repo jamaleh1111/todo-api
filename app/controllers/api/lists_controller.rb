@@ -1,9 +1,9 @@
 class Api::ListsController < ApiController
   before_action :authenticated?
-  before_action :permissions_valid, only: [:update]
 
   def create
-    list = List.new(list_params)
+    user = User.find(params[:user_id])
+    list = user.lists.new(list_params)
     if list.save
       render json: list
     else
