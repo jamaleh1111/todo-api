@@ -3,6 +3,5 @@ class Item < ActiveRecord::Base
 
   validates :list, presence: true
   validates :title, presence: true
-  validates :list_id, presence: true
 
 end
